@@ -4,7 +4,9 @@ $("#miformulario").submit(function(evento){
 	var cadena=$(this).serialize();
 	//console.info(cadena);//
 	$.ajax({
-		url:"http://localhost/prueba.php"
+		url:"http://especialistasenlaweb.com/base.php"
+		type: "post",
+		data:cadena
 	}).done(function(respuesta){
 		$(".mensaje").html(respuesta);
 	});
